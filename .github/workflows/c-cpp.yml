@@ -16,7 +16,7 @@ jobs:
     - name: install meson and ninja
       run: sudo apt-get install -y ninja-build meson
     - name: install criterion
-      run: pushd . && sudo git clone --quiet --depth 1 "https://aur.archlinux.org/criterion.git" "/home/build/criterion" && sudo cd "/home/build/criterion" && sudo runuser -u nobody -- makepkg -si --noconfirm --nocheck && popd
+      run: pushd . && sudo git clone --quiet --depth 1 "https://aur.archlinux.org/criterion.git" "/home/build/criterion" && cd "/home/build/criterion" && sudo runuser -u nobody -- makepkg -si --noconfirm --nocheck && popd
     - name: configure
       run: ./configure
     - name: make
