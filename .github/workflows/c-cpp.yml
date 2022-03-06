@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: install meson and ninja
-      run: sudo apt install meson ninja
+      run: sudo apt-get install -y ninja-build meson
     - name: install criterion
       run: git clone --recursive https://github.com/Snaipe/Criterion && cd Criterion && meson build && ninja -C build && ninja -c build install
     - name: configure
