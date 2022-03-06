@@ -16,7 +16,7 @@ jobs:
     - name: install meson and ninja
       run: sudo apt-get install -y ninja-build meson
     - name: install criterion
-      run: sudo apt-get install libcriterion-dev
+      run: sudo add-apt-repository ppa:snaipewastaken/ppa && sudo apt-get update && sudo apt-get install criterion-dev
     - name: configure
       run: ./configure
     - name: make
