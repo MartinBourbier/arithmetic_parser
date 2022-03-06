@@ -35,6 +35,7 @@ check: ${OBJ_TESTS} \
 	src/evaluator.o \
 	src/reducto.o
 	${CC} ${CFLAGS} $^ -o $@ ${LDFLAGS}
+	./check
 
 clean:
 	${RM} build
