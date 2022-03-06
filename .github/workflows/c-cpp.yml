@@ -19,7 +19,5 @@ jobs:
       run: git clone --recursive https://github.com/Snaipe/Criterion && cd Criterion && sudo meson build && sudo ninja -C build && sudo ninja -C build install 
     - name: configure
       run: ./configure
-    - name: make
-      run: make
     - name: make check
       run: make check
