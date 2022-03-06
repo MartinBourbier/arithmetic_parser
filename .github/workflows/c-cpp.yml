@@ -16,7 +16,7 @@ jobs:
     - name: install meson and ninja
       run: sudo apt-get install -y ninja-build meson
     - name: setup nobody
-      run: mkdir /home/build && chgrp nobody /home/build && chmod g+ws /home/build && sudo setfacl -m u::rwx,g::rwx /home/build && sudo setfacl -d --set u::rwx,g::rwx,o::- /home/build && sudo echo 'nobody ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+      run: sudo mkdir /home/build && sudo chgrp nobody /home/build && chmod g+ws /home/build && sudo setfacl -m u::rwx,g::rwx /home/build && sudo setfacl -d --set u::rwx,g::rwx,o::- /home/build && sudo echo 'nobody ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
     - name: install criterion
       run: pushd . && sudo git clone --quiet --depth 1 "https://aur.archlinux.org/criterion.git" "/home/build/criterion" && cd "/home/build/criterion" && sudo runuser -u nobody -- makepkg -si --noconfirm --nocheck && popd
     - name: configure
