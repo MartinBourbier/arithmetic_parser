@@ -2,5 +2,5 @@
 
 Test(sanity_check, assert_pass)
 {
-    cr_expect(true, "");
+    cr_expect(false, "");
 }
